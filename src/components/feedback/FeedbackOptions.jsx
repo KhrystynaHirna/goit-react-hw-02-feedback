@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
+// import { Button } from './button/Button';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  <ul>
-    {options.map(option => {
-      return (
-        <li key={option}>
-          <button
-            type="button"
-            onClick={onLeaveFeedback}
-            value={option}
-          ></button>
-        </li>
-      );
-    })}
-  </ul>;
+  return (
+    <ul>
+      {options.map(option => {
+        return (
+          <li key={option}>
+            <button type="button" onClick={onLeaveFeedback} value={option}>
+              {option}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
 
 FeedbackOptions.protoTypes = {
